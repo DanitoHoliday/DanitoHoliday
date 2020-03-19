@@ -1,0 +1,9 @@
+// Import page-specific CSS files here.
+@import "home";
+@import "landing_page";
+@import "/components/map";
+
+.btn .btn-green {
+  color: red;
+  margin-top: 30px;
+}

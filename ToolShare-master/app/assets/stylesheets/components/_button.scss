@@ -1,0 +1,59 @@
+.btn-green {
+  color: $button-font-color;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: $sea-green;
+  opacity: 0.8;
+  transition: background 0.3s ease;
+  font-weight: $button-font-weight;
+  font-size: $button-font-size;
+}
+
+.btn-green:hover {
+  background: $sea-green;
+  opacity: 1.0;
+  color: $button-font-color;
+}
+
+.btn-corale {
+  color: $button-font-color;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: $corale;
+  opacity: 0.8;
+  transition: background 0.3s ease;
+  font-weight: $button-font-weight;
+  font-size: $button-font-size;
+}
+
+.btn-corale:hover {
+  background: $corale;
+  opacity: 1.0;
+  color: $button-font-color;
+}
+
+.btn-icon {
+  background: $middle-light-grey;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+  font-color: $ash-black;
+
+}
+
+.btn-back {
+  color: $sea-green;
+  font-size:36px;
+  opacity: 0.8;
+}
+
+.btn-back:hover {
+  opacity: 1.0;
+  color: $sea-green;
+}
+
+.btn-go-back {
+  width: 40px;
+  border-radius: 50%;
+}
+
+

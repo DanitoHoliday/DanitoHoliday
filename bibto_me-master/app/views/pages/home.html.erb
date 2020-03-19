@@ -1,0 +1,157 @@
+<style>
+  .typing {
+        position: relative;
+        line-height: 24px;
+        display: inline-block;
+        color: #FFF;
+        min-width: 1px;
+        min-height: 24px;
+      }
+      .typing:after {
+        content: "";
+        position: absolute;
+        top: 5%;
+        right: -2px;
+        width: 1px;
+        height: 90%;
+        border-right: 2px solid #FFF;
+        animation: blink .5s infinite ease;
+      }
+      @keyframes blink{
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1%;
+        }
+      }
+</style>
+
+<body>
+<div class="landing-page" id="lp-top">
+
+  <div class="container" >
+
+    <div class="svg-logo">
+      <%= image_tag("landing-logo-with-text.svg", :alt => "") %>
+    </div>
+
+    <div id="banner-slogan">
+      <h1>
+        Get your lost items returned <div id="typing" class="typing"></div>
+      </h1>
+      <br>
+    </div>
+
+    <div id="lp-btn">
+      <%= link_to "Register my tag", register_input_path, class: "btn btn-bib btn-white mb-3", style: "width: 90%; font-weight: 300;" %>
+      <%= link_to "Return item", finder_input_path, class: "btn btn-bib btn-grey mb-5", style: "width: 90%; font-weight: 300;" %>
+    </div>
+
+    <br>
+    <br>
+
+    <p class= "font-yellow p-small text-center mb-0">How does it work?</p>
+
+    <a href="#explanation">
+      <div id="arrow-down">
+        <%= image_tag "down-arrow.svg", alt: "alttext" %>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="bg-white">
+
+    <div id= "explanation" class= "text-center text-white mt-5 container lp-about">
+      <div class="mt-5 mb-3 pt-5 pb-5" style="background-color: rgba(0, 0, 0, 0.04); border-radius: 5px">
+        <%= image_tag "bib_icon_buy_green.svg", alt: "alttext" %>
+        <p class="p-big mt-2">Buy tags</p>
+        <!-- Choose your tag <br>and get it shipped -->
+      </div>
+
+      <div class="mb-3 pt-5 pb-5" style="background-color: rgba(0, 0, 0, 0.04); border-radius: 5px">
+        <%= image_tag "bib_icon_register_green.svg", alt: "alttext" %>
+        <p class="p-big mt-2">Register tags</p>
+        <!-- Register your tag and <br>attach it to your item -->
+      </div>
+
+      <div class="mb-3 pt-5 pb-5" style="background-color: rgba(0, 0, 0, 0.04); border-radius: 5px">
+        <%= image_tag "bib_icon_notify_green.svg", alt: "alttext" %>
+        <p class=" p-big mt-2">Get notified</p>
+        <!-- Get notified when <br>your lost item  is found -->
+      </div>
+    </div>
+
+    <br>
+<div class="text-center align-center" style="margin-left: 60px;">
+  <div class="card text-center" style="width: 18rem;">
+    <img class="card-img-top" src="https://images.unsplash.com/photo-1533558701576-23c65e0272fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="color: #1EDD88">Story of the day</h5>
+      <p class="card-text p-small">Here is an amazing story of Ivan, who lost his car keys. You won't believe what happened next!</p>
+      <a href="#" class="btn btn-bib btn-green" style="font-weight: 300;">Read more</a>
+    </div>
+  </div>
+</div>
+
+    <div class="text-center">
+      <a class="font-yellow p-small" href="#lp-top"> Back to top</a>
+    </div>
+
+    <br>
+</div>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <!-- <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a> -->
+  </div>
+
+  <div class="footer-logo">
+    <p class="bib-logo-footer my-0 py-0 font-d-yellow">bibto.me</p>
+    <p class="bib-logo-footer my-0 py-0" id="bib-logo-footer-sub">bring it back to me</p>
+  </div>
+</div>
+
+<%= render "shared/menu" %>
+
+<script>
+var typeString = ['easy.  ', 'fast.  ', 'secure.  '];
+var  i = 0;
+var count = 0
+var selectedText = '';
+var text = '';
+(function type() {
+  if (count == typeString.length) {
+    count = 0;
+  }
+  selectedText = typeString[count];
+  text = selectedText.slice(0, ++i);
+  document.getElementById('typing').innerHTML = text;
+  if (text.length === selectedText.length) {
+    count++;
+    i = 0;
+  }
+  setTimeout(type, 250);
+}());
+
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
+</script>
+
+</body>
+
+
+
+
+

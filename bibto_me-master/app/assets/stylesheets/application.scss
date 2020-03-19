@@ -1,0 +1,46 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+
+// @import "./fontawesome/scss/fontawesome.scss";
+
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: $dark-grey;
+  background-color: white;
+
+}
+
+
+// Helpers
+.text-small {
+  font-size: 22px;
+}
+
+.text-input {
+  font-size: 18px;
+}
+
+
+// makes super cool scrolling on a page (landing page)_by Anouk
+html {
+  scroll-behavior: smooth;
+}
+

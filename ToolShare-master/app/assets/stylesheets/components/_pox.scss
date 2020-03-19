@@ -1,0 +1,31 @@
+.box-r-img {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $background-color;
+}
+
+$box-table-font-size: 20px;
+
+.box-table table {
+  padding: 0.5rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.box-table td {
+ padding-left: 20px;
+ font-size: $box-table-font-size;
+}
+
+.box-table th {
+  vertical-align: top;
+  font-size: $box-table-font-size;
+}
+
+.btn-box {
+  margin-top: 30px;
+}
